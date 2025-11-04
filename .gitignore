@@ -1,18 +1,43 @@
-
+# Node modules
 node_modules/
 
+# Environment files
 .env
+.env.local
+.env.development
+.env.production
 
-# Ignore system-specific files
-.DS_Store
-Thumbs.db
-
-# Ignore log files
+# Logs
+logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Ignore build artifacts (optional, if applicable)
+# Build artifacts
+.next/
 dist/
 build/
+out/
+
+# Firebase and AWS configs
+firebase-service-account.json
+firebase.json
+.google/
+.aws/
+
+# System-specific files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.swp
+
+# Test coverage
+coverage/
+*.lcov
