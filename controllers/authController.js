@@ -6,7 +6,8 @@ const crypto = require("crypto");
 const { sendOTP, sendPasswordResetEmail } = require("../services/emailService");
 
 // Initialize Firebase Admin SDK
-const serviceAccount = require("../config/anokhi-e7c9f-firebase-adminsdk-fbsvc-853da0992b.json");
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
