@@ -12,7 +12,11 @@ const app = express();
 
 // Security Middleware
 app.use(cors({
-  origin: 'https://anokhi-frontend-five.vercel.app',
+  origin: [
+    'http://localhost:3000',
+    'https://anokhi-frontend-five.vercel.app',
+    'https://www.anokhi.org.in'
+  ],
   credentials: true
 }));
 app.use(helmet());
